@@ -13,14 +13,15 @@ const loadMenu = () => {
 }
 
 const fieldMenu = menu => {
-    // console.log(menu)
+
     const menuContainer = document.getElementById('menu-field');
+
     menu.forEach(menus => {
         const menusDiv = document.createElement('ul');
         menusDiv.classList.add('d-flex');
         menusDiv.innerHTML = `
-        <li class="nav-item">
-        <a class="nav-link" href="#" onclick='loadNewsBlogs()'>${menus.category_name}</a>
+        <li class="nav-item col-sm-12">
+        <a class="nav-link btn btn-primary text-white px-3 mx-2" href="#" onclick='loadNewsBlogs()'>${menus.category_name}</a>
     </li>
     `;
         menuContainer.appendChild(menusDiv)
@@ -64,12 +65,10 @@ const displayNews = news => {
                     <h3 class='m-5'><i class="fa-light fa-eye">${blog.total_view ? blog.total_view : `Not found`}</i></h3>
                 </div>
             </div>
-
             </div>
         </div>
         
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newsDetalis" onclick='buttonModal("${blog._id}")'>Details</button>
-
         
     </div>
     `;
@@ -152,3 +151,5 @@ const toggleSpinner = isLoading => {
 
 
 // loadNewsBlogs()
+
+
