@@ -21,7 +21,7 @@ const fieldMenu = menu => {
         menusDiv.classList.add('d-flex');
         menusDiv.innerHTML = `
         <li class="nav-item col-sm-12">
-        <a class="nav-link btn btn-primary text-white px-3 mx-2" href="#" onclick='loadNewsBlogs()'>${menus.category_name}</a>
+        <a class="nav-link btn btn-primary text-white px-3 mx-2" href="#" onclick='loadNewsBlogs("${menus.category_id}")'>${menus.category_name}</a>
     </li>
     `;
         menuContainer.appendChild(menusDiv)
@@ -31,8 +31,8 @@ const fieldMenu = menu => {
 loadMenu()
 
 
-const loadNewsBlogs = () => {
-    const url = `https://openapi.programming-hero.com/api/news/category/01`;
+const loadNewsBlogs = (category_id) => {
+    const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
     try {
         fetch(url)
             .then(res => res.json())
@@ -45,6 +45,8 @@ const loadNewsBlogs = () => {
 const displayNews = news => {
 
     const newsContainer = document.getElementById('news-blogs');
+    newsContainer.innerHTML = "";
+    document.getElementById('Items').innerText = `${news.length}`
     news.forEach(blog => {
         const newsDiv = document.createElement('div');
         newsDiv.classList.add('col')
@@ -150,6 +152,6 @@ const toggleSpinner = isLoading => {
 }
 
 
-// loadNewsBlogs()
+
 
 
