@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>News 24</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/80841cfdba.js" crossorigin="anonymous"></script>
@@ -25,11 +25,12 @@
     <header>
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand fs-4"><span class="bg-primary rounded mx-2 p-2">News</span> 24</a>
+                <a class="navbar-brand fs-4"><span class="text-black fs-2 fw-bold rounded mx-2 px-2">News</span><span
+                        class="bg-danger p-2 rounded text-white">24</span></a>
                 <div class="">
                     <ul class="d-flex">
-                        <li class="px-5 text-bold fs-4"><a class="text-decoration-none" href="#">news</a></li>
-                        <li id="blogs-pages" class="px-5 fs-4"><a
+                        <li class="px-5 text-bold fs-4 fw-bold"><a class="text-decoration-none" href="#">news</a></li>
+                        <li id="blogs-pages" class="px-5 fw-bold fs-4"><a
                                 class="bg-primary p-4 rounded text-white text-decoration-none" href="blogs.html"
                                 target="_blank">Blogs</a>
                         </li>
@@ -44,12 +45,15 @@
 
     <main>
         <section>
-            <div id="menu-field" class="nav my-4 text-bold fs-5 d-flex">
+            <div id="menu-field" class="nav my-4 text-bold  d-flex">
 
             </div>
         </section>
         <div id="no-found-message" class="mt-4">
-            <h3 class="text-warning"><span id="Items">0</span>news found in this category</h3>
+            <h3 class="text-white bg-primary py-4"><span id="Items" class="px-2 text-warning fw-bold">0</span>News found
+                in this
+                <span id="category">Category</span>
+            </h3>
         </div>
         <section>
             <div class="bg-Secondary">
@@ -116,6 +120,10 @@
             </div>
         </section>
     </main>
+    <footer class="bg-primary">
+        <h1 class="text-center p-5 m-4 text-white">Copyright © 2022 News <span class="bg-danger px-3 rounded">24</span>
+        </h1>
+    </footer>
 
 
 

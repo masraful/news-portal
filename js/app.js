@@ -13,15 +13,13 @@ const loadMenu = () => {
 }
 
 const fieldMenu = menu => {
-
     const menuContainer = document.getElementById('menu-field');
-
     menu.forEach(menus => {
         const menusDiv = document.createElement('ul');
         menusDiv.classList.add('d-flex');
         menusDiv.innerHTML = `
         <li class="nav-item col-sm-12">
-        <a class="nav-link btn btn-primary text-white px-3 mx-2" href="#" onclick='loadNewsBlogs("${menus.category_id}")'>${menus.category_name}</a>
+        <a class="nav-link btn btn-primary text-white px-3 mx-1 fw-bold" href="#" onclick='loadNewsBlogs("${menus.category_id}")'>${menus.category_name}</a>
     </li>
     `;
         menuContainer.appendChild(menusDiv)
@@ -43,10 +41,10 @@ const loadNewsBlogs = (category_id) => {
     }
 }
 const displayNews = news => {
-
     const newsContainer = document.getElementById('news-blogs');
     newsContainer.innerHTML = "";
-    document.getElementById('Items').innerText = `${news.length}`
+    document.getElementById('Items').innerText = `${news.length}`;
+
     news.forEach(blog => {
         const newsDiv = document.createElement('div');
         newsDiv.classList.add('col')
